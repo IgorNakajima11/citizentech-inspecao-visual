@@ -1,0 +1,141 @@
+{
+ "equipamento": {
+  "cpu": "13th Gen Intel(R) Core(TM) i5-1334U",
+  "gpu": "nenhuma (só CPU)",
+  "sistema": "Linux-7.0.0-43-generic-x86_64-desconhecido-with-glibc2.43"
+ },
+ "resolucao_entrada": "227x227 da base, redimensionada pelo pré-processamento de cada modelo para 224x224",
+ "n": {
+  "treino": 1811,
+  "validacao": 597,
+  "teste": 592
+ },
+ "modelos": {
+  "resnet50": {
+   "id": "Qdrant/resnet50-onnx",
+   "C": 1.0,
+   "limiar": 0.45,
+   "tempo_extracao_s": 88.2,
+   "fissura": {
+    "precisao": 0.99,
+    "recall": 0.9933,
+    "f1": 0.9917
+   },
+   "sem_fissura": {
+    "precisao": 0.9932,
+    "recall": 0.9898,
+    "f1": 0.9915
+   },
+   "acuracia": 0.9916,
+   "matriz_confusao": [
+    [
+     290,
+     3
+    ],
+    [
+     2,
+     297
+    ]
+   ],
+   "erros": [
+    {
+     "arquivo": "dados/teste/sem_fissura/09117.jpg",
+     "real": "sem_fissura",
+     "previsto": "fissura",
+     "confianca_fissura": 0.656
+    },
+    {
+     "arquivo": "dados/teste/sem_fissura/12428.jpg",
+     "real": "sem_fissura",
+     "previsto": "fissura",
+     "confianca_fissura": 0.489
+    },
+    {
+     "arquivo": "dados/teste/sem_fissura/13694.jpg",
+     "real": "sem_fissura",
+     "previsto": "fissura",
+     "confianca_fissura": 0.508
+    },
+    {
+     "arquivo": "dados/teste/fissura/00019.jpg",
+     "real": "fissura",
+     "previsto": "sem_fissura",
+     "confianca_fissura": 0.41
+    },
+    {
+     "arquivo": "dados/teste/fissura/05437.jpg",
+     "real": "fissura",
+     "previsto": "sem_fissura",
+     "confianca_fissura": 0.417
+    }
+   ],
+   "latencia_media_ms": 29.3,
+   "latencia_p95_ms": 31.1,
+   "fps": 34.1,
+   "imagens_medidas": 50
+  },
+  "clip_vit_b32": {
+   "id": "Qdrant/clip-ViT-B-32-vision",
+   "C": 1.0,
+   "limiar": 0.45,
+   "tempo_extracao_s": 108.8,
+   "fissura": {
+    "precisao": 0.9933,
+    "recall": 0.99,
+    "f1": 0.9916
+   },
+   "sem_fissura": {
+    "precisao": 0.9898,
+    "recall": 0.9932,
+    "f1": 0.9915
+   },
+   "acuracia": 0.9916,
+   "matriz_confusao": [
+    [
+     291,
+     2
+    ],
+    [
+     3,
+     296
+    ]
+   ],
+   "erros": [
+    {
+     "arquivo": "dados/teste/sem_fissura/13694.jpg",
+     "real": "sem_fissura",
+     "previsto": "fissura",
+     "confianca_fissura": 0.569
+    },
+    {
+     "arquivo": "dados/teste/sem_fissura/18280.jpg",
+     "real": "sem_fissura",
+     "previsto": "fissura",
+     "confianca_fissura": 0.591
+    },
+    {
+     "arquivo": "dados/teste/fissura/05392.jpg",
+     "real": "fissura",
+     "previsto": "sem_fissura",
+     "confianca_fissura": 0.45
+    },
+    {
+     "arquivo": "dados/teste/fissura/06483.jpg",
+     "real": "fissura",
+     "previsto": "sem_fissura",
+     "confianca_fissura": 0.443
+    },
+    {
+     "arquivo": "dados/teste/fissura/14221_1.jpg",
+     "real": "fissura",
+     "previsto": "sem_fissura",
+     "confianca_fissura": 0.436
+    }
+   ],
+   "latencia_media_ms": 43.4,
+   "latencia_p95_ms": 45.5,
+   "fps": 23.1,
+   "imagens_medidas": 50
+  }
+ }
+}
