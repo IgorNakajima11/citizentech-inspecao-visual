@@ -3,6 +3,8 @@
 Global Solution 2026.2, disciplina Visão Computacional.
 Integrante: **Igor Thiago Nakajima Vieira**, RM 563632 (trabalho individual).
 
+**Vídeo de demonstração:** [video/apresentacao_igor_nakajima_563632.mp4](video/apresentacao_igor_nakajima_563632.mp4)
+
 Módulo de visão computacional do CitizenTech para **triagem de locais para inspeção**:
 - **Foto:** o cidadão ou o fiscal envia a foto de uma superfície de concreto, e o sistema marca as regiões com
   possível fissura, com a confiança do modelo.
